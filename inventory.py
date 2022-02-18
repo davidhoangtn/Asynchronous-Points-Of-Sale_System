@@ -1,6 +1,6 @@
 import asyncio
 import random
-
+import time
 
 class Inventory:
     '''
@@ -112,3 +112,17 @@ class Inventory:
     async def get_item(self, item_id):
         await asyncio.sleep(1)
         return self.items[item_id]
+
+inventory = Inventory()
+inventory._generate_item_lookup_dict()
+
+# async def main():
+#     print(inventory.get_item(1))
+# #     task = await inventory.get_item(19)
+# #     print(task)
+# #     print (await inventory.get_number_of_items())
+# #     print (await inventory.get_stock(19))
+# #     print (await inventory.decrement_stock(19))
+# #     print (await inventory.get_stock(19))
+
+# asyncio.run(main())
